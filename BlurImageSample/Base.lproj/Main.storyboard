@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlurImageSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-Z2-GW3">
+                                <rect key="frame" x="80" y="80" width="440" height="440"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXh-GM-DS3">
+                                <rect key="frame" x="80" y="80" width="440" height="440"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gXh-GM-DS3" secondAttribute="height" multiplier="1:1" id="LyO-gQ-5YG"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aJf-uG-Sg9">
+                                <rect key="frame" x="230" y="50" width="140" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="5BI-g8-gcF"/>
+                                    <constraint firstAttribute="height" constant="31" id="Agi-4N-Jhi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Original"/>
+                                    <segment title="Blur"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="7UW-ky-zOF"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JP6-Z2-GW3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Zi-gX-jvJ"/>
+                            <constraint firstItem="gXh-GM-DS3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6wB-N5-Up2"/>
+                            <constraint firstItem="gXh-GM-DS3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8f4-Y1-vfS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gXh-GM-DS3" secondAttribute="trailing" constant="60" id="Hcq-BR-cAP"/>
+                            <constraint firstItem="gXh-GM-DS3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="PSf-rD-hE4"/>
+                            <constraint firstItem="JP6-Z2-GW3" firstAttribute="height" secondItem="gXh-GM-DS3" secondAttribute="height" id="Rne-IY-hA2"/>
+                            <constraint firstItem="gXh-GM-DS3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZZ-2e-6wv"/>
+                            <constraint firstItem="aJf-uG-Sg9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zqa-eh-j5w"/>
+                            <constraint firstItem="JP6-Z2-GW3" firstAttribute="width" secondItem="gXh-GM-DS3" secondAttribute="width" id="aRI-4i-k8X"/>
+                            <constraint firstItem="gXh-GM-DS3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mJz-Gx-WW3"/>
+                            <constraint firstItem="JP6-Z2-GW3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nKZ-mI-vjp"/>
+                            <constraint firstItem="aJf-uG-Sg9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="vov-Q7-Pek"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurImageView" destination="JP6-Z2-GW3" id="gfM-V4-E2A"/>
+                        <outlet property="originalImageView" destination="gXh-GM-DS3" id="TlL-yz-wGU"/>
+                        <outlet property="segmentedController" destination="aJf-uG-Sg9" id="s6R-DV-Bjt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

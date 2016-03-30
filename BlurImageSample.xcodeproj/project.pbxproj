@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA83F6011CABAEAC00F6B87A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83F6001CABAEAC00F6B87A /* UIImage.swift */; };
 		CA83F6031CABB6B500F6B87A /* BlurImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83F6021CABB6B500F6B87A /* BlurImage.swift */; };
 		CA9D163F1CA3692C00456C5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D163E1CA3692C00456C5B /* AppDelegate.swift */; };
 		CA9D16411CA3692C00456C5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D16401CA3692C00456C5B /* ViewController.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA83F6001CABAEAC00F6B87A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		CA83F6021CABB6B500F6B87A /* BlurImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurImage.swift; sourceTree = "<group>"; };
 		CA9D163B1CA3692C00456C5B /* BlurImageSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurImageSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9D163E1CA3692C00456C5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				CA9D163E1CA3692C00456C5B /* AppDelegate.swift */,
 				CA9D16401CA3692C00456C5B /* ViewController.swift */,
-				CA83F6001CABAEAC00F6B87A /* UIImage.swift */,
 				CA83F6021CABB6B500F6B87A /* BlurImage.swift */,
 				CA9D16421CA3692C00456C5B /* Main.storyboard */,
 				CA9D16451CA3692C00456C5B /* Assets.xcassets */,
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA83F6011CABAEAC00F6B87A /* UIImage.swift in Sources */,
 				CA9D16411CA3692C00456C5B /* ViewController.swift in Sources */,
 				CA83F6031CABB6B500F6B87A /* BlurImage.swift in Sources */,
 				CA9D163F1CA3692C00456C5B /* AppDelegate.swift in Sources */,

@@ -48,8 +48,7 @@ class BlurImage {
         guard let blurOutputImage = blurFilter.outputImage else {
             return sourceImage
         }
-        let croppingImage = blurOutputImage.imageByCroppingToRect(CGRect(x: radius, y: radius, width: sourceCIImage.extent.width, height: sourceCIImage.extent.height))
-        let cgImage = CIContext(options: [kCIContextUseSoftwareRenderer: !gpu]).createCGImage(croppingImage, fromRect: croppingImage.extent)
+        let cgImage = CIContext(options: [kCIContextUseSoftwareRenderer: !gpu]).createCGImage(blurOutputImage, fromRect: sourceCIImage.extent)
         return UIImage(CGImage: cgImage, scale: UIScreen.mainScreen().scale, orientation: sourceImage.imageOrientation)
     }
 }
